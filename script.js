@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     li.textContent = doc.titre;
                     li.dataset.chemin = doc.chemin;
                     li.addEventListener('click', () => {
-                        // Utiliser l'API OpenBoard pour ouvrir le document
-                        window.widget.openURL(`http://localhost/${doc.chemin}`);
+                        // Utiliser l'API OpenBoard pour ajouter le document
+                        window.sankore.addObject(doc.chemin);
                     });
                     documentList.appendChild(li);
                 });

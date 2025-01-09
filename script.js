@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch('http://poc.fr/api.php?action=get_formations')
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             data.forEach(formation => {
                 const option = document.createElement('option');
                 option.value = formation.id;
@@ -25,7 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     li.textContent = doc.titre;
                     li.dataset.chemin = doc.chemin;
                     li.addEventListener('click', () => {
-                        window.open(`http://poc.fr/${doc.chemin}`, '_blank');
+                        // Utiliser l'API OpenBoard pour ouvrir le document
+                        window.widget.openURL(`http://localhost/${doc.chemin}`);
                     });
                     documentList.appendChild(li);
                 });

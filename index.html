@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Viewer</title>
+    <title>OpenBoard POC</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
         <h1>Documents disponibles</h1>
-        <select id="formation-select"></select>
+        <label for="formation-select">Choisissez une formation :</label>
+        <select id="formation-select">
+            <option value="">Sélectionnez une formation</option>
+        </select>
         <ul id="document-list"></ul>
         <input type="file" id="upload-file" hidden>
     </div>

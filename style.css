@@ -12,13 +12,18 @@ h1 {
     text-align: center;
 }
 
+select, ul {
+    width: 100%;
+    margin: 10px 0;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
 }
 
 li {
-    margin: 10px 0;
+    margin: 5px 0;
     cursor: pointer;
     color: blue;
 }
